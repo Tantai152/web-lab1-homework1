@@ -71,3 +71,4 @@
 -
 ## M1 — WCAG 2.2 AA Audit (2026-10-07): Lighthouse A11y score 100. Contrast >= 4.5:1 both modes. 1 h1. Landmarks pass.
 ## M2 — Focus Trap Audit (2026-10-07): Tab flow correct. Esc closes dialog. Focus restored. No keyboard trap.
+## M3 — CSP Audit (2026-10-07): grep onclick → empty. grep innerHTML → empty. grep var → empty. Meta CSP present.
