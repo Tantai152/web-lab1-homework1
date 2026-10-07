@@ -69,3 +69,4 @@
 - After H1-08: full keyboard Tab flow works, Esc closes dialog.
 - After H1-M4: Lighthouse 4 categories = 100.
 -
+## M1 — WCAG 2.2 AA Audit (2026-10-07): Lighthouse A11y score 100. Contrast >= 4.5:1 both modes. 1 h1. Landmarks pass.
