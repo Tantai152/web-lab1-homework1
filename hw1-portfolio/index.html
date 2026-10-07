@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://placehold.co data:; style-src 'self'; script-src 'self'">
+  <title>Nguyễn Tất Tấn Tài — Portfolio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Nguyễn Tất Tấn Tài, Lead Engineer</h1>
+    <p>Building resilient, accessible, and high-performance web applications.</p>
+    <button
+      id="theme-btn"
+      type="button"
+      aria-pressed="false"
+      aria-label="Toggle dark mode"
+    >
+      <span aria-hidden="true">◐</span>
+      Dark mode
+    </button>
+  </header>
+
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section id="about">
+      <h2>About</h2>
+      <figure>
+        <img
+          src="https://placehold.co/200x200"
+          alt="Portrait of Nguyễn Tất Tấn Tài"
+          width="200"
+          height="200"
+          loading="lazy"
+          decoding="async"
+        >
+      </figure>
+      <p>
+        I am a lead engineer focused on building maintainable web applications
+        with strong accessibility, performance, and user-centered engineering practices.
+      </p>
+    </section>
+
+```
+<section id="skills">
+  <h2>Skills</h2>
+  <ul class="badges">
+    <li class="badge">HTML5</li>
+    <li class="badge">CSS Grid</li>
+    <li class="badge">Flexbox</li>
+    <li class="badge">ES6+</li>
+    <li class="badge">WCAG 2.2</li>
+    <li class="badge">A11y</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <section class="project-grid" aria-label="Projects">
+    <article class="project-card" data-category="frontend">
+      <header class="card-header">
+        <h3>Distributed State Engine</h3>
+        <span class="badge">TypeScript</span>
+      </header>
+      <p>Distributed state management for resilient front-end applications.</p>
+      <footer class="card-footer">
+        <a href="#" aria-label="View source code for Distributed State Engine">Source code</a>
+      </footer>
+    </article>
+
+    <article class="project-card" data-category="a11y">
+      <header class="card-header">
+        <h3>WCAG Contrast Auditor</h3>
+        <span class="badge">Accessibility</span>
+      </header>
+      <p>Accessibility auditing for WCAG-compliant color contrast.</p>
+      <footer class="card-footer">
+        <a href="#" aria-label="View source code for WCAG Contrast Auditor">Source code</a>
+      </footer>
+    </article>
+
+    <article class="project-card" data-category="perf">
+      <header class="card-header">
+        <h3>CLS Guard</h3>
+        <span class="badge">Performance</span>
+      </header>
+      <p>Performance tooling for detecting and preventing cumulative layout shift.</p>
+      <footer class="card-footer">
+        <a href="#" aria-label="View source code for CLS Guard">Source code</a>
+      </footer>
+    </article>
+  </section>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contact-form" action="/api/contact" method="POST" novalidate>
+    <p>
+      <label for="contact-name">Name</label>
+      <input
+        id="contact-name"
+        name="name"
+        type="text"
+        required
+        minlength="3"
+        autocomplete="name"
+      >
+    </p>
+
+    <p>
+      <label for="contact-email">Email</label>
+      <input
+        id="contact-email"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+      >
+    </p>
+
+    <p>
+      <label for="contact-msg">Message</label>
+      <textarea
+        id="contact-msg"
+        name="message"
+        rows="4"
+        required
+        minlength="10"
+      ></textarea>
+    </p>
+
+    <button type="submit">Send</button>
+
+    <p
+      id="form-status"
+      role="status"
+      aria-live="polite"
+      data-state="idle"
+    ></p>
+  </form>
+</section>
+```
+
+  </main>
+
+  <footer>
+    <p>© 2026 Nguyễn Tất Tấn Tài. All rights reserved.</p>
+  </footer>
+
+  <dialog id="a11y-dialog" aria-labelledby="dlg-title">
+    <h2 id="dlg-title">Accessibility Statement</h2>
+    <p>This portfolio is designed with accessibility and WCAG 2.2 AA principles in mind.</p>
+    <button type="button" data-close-dialog>Close</button>
+  </dialog>
+
+  <script src="js/theme.js" defer></script>
+
+  <script src="js/form.js" defer></script>
+
+  <script src="js/dialog.js" defer></script>
+
+</body>
+</html>
